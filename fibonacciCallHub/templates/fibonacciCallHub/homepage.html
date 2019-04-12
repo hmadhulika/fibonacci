@@ -17,9 +17,14 @@
 				<p><input type = "submit" /></p>
 			</form>
 			<hr>
-			<p>Entered Number: <b>{{number}}</b></p>
-			<p>Result: <b>{{result}}</b></p>
-			<p>Time Taken: <b>{{timeDiff}}</b></p>
+			<p style="color: red">{{message}}</p>
+			{% if message == 'Please enter the number' %}
+
+			{% else %}
+				<p>Entered Number: <b>{{number}}</b></p>
+				<p>Result: <b>{{fibNum}}</b></p>
+				<p>Time Taken: <b>{{timeDiff}}</b></p>
+			{% endif %}
 		</div>
 	</center>
 </body>

@@ -16,7 +16,7 @@ x = (((math.sqrt(5)+1)/2) ** n)/math.sqrt(5)
 
 Time Complexity: O(1)
 
-##Support
+## Support
 http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibFormula.html
 
 # Running the tests

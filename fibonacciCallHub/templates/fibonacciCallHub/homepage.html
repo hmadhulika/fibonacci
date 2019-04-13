@@ -2,30 +2,38 @@
 <html>
 <head>
 	<title>Fibonacci</title>
-	<style type="text/css">
-		.center{
-			margin-top:20%;
-		}
-	</style>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
 </head>
-<body style="background-color: #cfcfe1">
-	<center>
-		<div class="center">
-			<form action='/result/' method = "POST">
-				{% csrf_token %}
-				<p>Enter the Nth number in Fibonacci sequence: <input type="number" name="fnumber" min="1"></p>
-				<p><input type = "submit" /></p>
-			</form>
-			<hr>
-			<p style="color: red">{{message}}</p>
-			{% if message == 'Please enter the number' %}
+<body>
+	<div class="jumbotron"> 
+		<div class="container">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+					<form action='/result/' method = "POST">
+						{% csrf_token %}
+						<div class="form-group">
+							<label for="num">Enter the Nth number in Fibonacci sequence:</label>
+							<input type="number" class="form-control" id="num" name="fnumber" min="1">
+						</div>
 
-			{% else %}
-				<p>Entered Number: <b>{{number}}</b></p>
-				<p>Result: <b>{{fibNum}}</b></p>
-				<p>Time Taken: <b>{{timeDiff}}</b></p>
-			{% endif %}
+						<center><input type = "submit" class="btn btn-success"/></center>
+					</form>
+			</div>
+			<div class="col-md-4"></div>
 		</div>
+	</div>
+	<center>	
+		<h4 class="text-danger">{{message}}</h4>
+		{% if message == 'Please enter the number' %}
+
+		{% else %}
+			<h5>Entered Number: <b>{{number}}</b></h5>
+			<h5>Result: <b>{{fibNum}}</b></h5>
+			<h5>Time Taken: <b>{{timeDiff}}</b></h5> 
+		{% endif %}
 	</center>
 </body>
 </html>

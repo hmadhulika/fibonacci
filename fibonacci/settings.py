@@ -25,7 +25,7 @@ SECRET_KEY = '0a#zl($(3#_itc88y+pa)a1^tz24k1v(tr00)7fth_@qnz74i2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://fibonaccidjangocallhub.herokuapp.com']
+ALLOWED_HOSTS = ['fibonaccidjangocallhub.herokuapp.com']
 
 
 # Application definition

@@ -27,7 +27,7 @@ def result(request):
 			
 			# time_diff1 = time.time() - start_time
 
-			return  render(request,'fibonacciCallHub/homepage.html', {'number':user_entered, 'fibNum':fibNum, 'timeDiff':float(time_diff)})
+			return  render(request,'fibonacciCallHub/homepage.html', {'number':user_entered, 'fibNum':fibNum, 'timeDiff':("%.5f" % time_diff)})
 
 # def fibonacci1(n):
 #     if n==0: 
